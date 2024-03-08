@@ -26,8 +26,23 @@ body {
 }
 
 .principal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     border: solid black;
     height: 30rem;
-    width: 80%;
+    width: 50%;
+    justify-content: center;
 }
 
+#image{
+    display: flex;
+    flex-grow: 100%;
+    width: 100%;
+}
+
+#quote{
+    margin-left: 5rem;
+    width: 30%;
+    font-size: xx-large;
+}
