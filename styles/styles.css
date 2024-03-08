@@ -1,0 +1,33 @@
+* {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+body {
+    z-index: 0;
+    background-color: #92d4f7;
+    position: relative; /* Añadido */
+    width: 100%;
+    height: 100%;
+    background-image:url("./../design/nubes.png");
+}
+
+.logo {
+    margin: 0;
+    height: 13rem;
+    z-index: 1;
+    position: relative; /* Añadido */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.principal{
+    border: solid black;
+    height: 30rem;
+    width: 80%;
+}
+
