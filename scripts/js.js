@@ -17,11 +17,14 @@ window.onload = async function() {
         if (comments.length > 0) {
             const quote = comments[0].quote;
             const imageUrl = comments[0].image;
+            const characterName = comments[0].character; // Obtener el nombre del personaje actualmente mostrado
 
-            // Actualizar los elementos HTML con la cita y la imagen obtenidas
+            // Actualizar los elementos HTML con la cita, la imagen y el nombre del personaje obtenidos
             quoteElement.textContent = quote;
             imageElement.src = imageUrl;
-            currentCharacter = comments[0].character; // Guardar el nombre del personaje
+            currentCharacter = characterName; // Guardar el nombre del personaje
+            const nameElement = document.getElementById('name');
+            nameElement.textContent = characterName; // Actualizar el elemento HTML con el nombre del personaje
         } else {
             console.error('No se encontraron citas.');
         }
@@ -38,10 +41,13 @@ button.addEventListener('click', async () => {
         if (comments.length > 0) {
             const quote = comments[0].quote;
             const imageUrl = comments[0].image;
+            const characterName = comments[0].character; // Obtener el nombre del nuevo personaje
 
             quoteElement.textContent = quote;
             imageElement.src = imageUrl;
-            currentCharacter = comments[0].character; // Guardar el nombre del nuevo personaje
+            currentCharacter = characterName; // Guardar el nombre del nuevo personaje
+            const nameElement = document.getElementById('name');
+            nameElement.textContent = characterName; // Actualizar el elemento HTML con el nombre del personaje
         } else {
             quoteElement.textContent = "No se encontraron citas.";
         }
