@@ -78,6 +78,17 @@ body {
     height: 2.5rem;
 }
 
+.segundo{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.tercero{
+    display: flex;
+    flex-direction: column;
+
+}
 
 .send{
     margin-bottom: 3rem;
