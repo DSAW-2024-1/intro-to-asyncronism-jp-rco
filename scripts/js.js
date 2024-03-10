@@ -1,6 +1,11 @@
 const button = document.querySelector('#fetchbutton');
 const quoteElement = document.getElementById('quote');
 const imageElement = document.getElementById('image');
+const sendButton = document.querySelector('.send');
+const inputElement = document.getElementById('input');
+
+// Variable para almacenar el nombre del personaje actualmente mostrado en la imagen
+let currentCharacter = '';
 
 // Espera a que la ventana esté completamente cargada
 window.onload = async function() {
@@ -14,11 +19,9 @@ window.onload = async function() {
             const imageUrl = comments[0].image;
 
             // Actualizar los elementos HTML con la cita y la imagen obtenidas
-            const quoteElement = document.getElementById('quote');
             quoteElement.textContent = quote;
-
-            const imageElement = document.getElementById('image');
             imageElement.src = imageUrl;
+            currentCharacter = comments[0].character; // Guardar el nombre del personaje
         } else {
             console.error('No se encontraron citas.');
         }
@@ -26,7 +29,6 @@ window.onload = async function() {
         console.error('Error fetching quote:', error);
     }
 };
-
 
 button.addEventListener('click', async () => {
     try {
@@ -39,11 +41,36 @@ button.addEventListener('click', async () => {
 
             quoteElement.textContent = quote;
             imageElement.src = imageUrl;
+            currentCharacter = comments[0].character; // Guardar el nombre del nuevo personaje
         } else {
             quoteElement.textContent = "No se encontraron citas.";
         }
     } catch (error) {
         console.error('Error fetching quote:', error);
         quoteElement.textContent = "Error al cargar la cita.";
+    }
+});
+
+sendButton.addEventListener('click', async () => {
+    try {
+        // Obtener el número ingresado por el usuario
+        const numFrases = parseInt(inputElement.value);
+
+        // Realizar la solicitud fetch para obtener las frases del personaje actual
+        const response = await fetch(`https://thesimpsonsquoteapi.glitch.me/quotes?count=${numFrases}&character=${currentCharacter}`);
+        const data = await response.json();
+
+        // Construir una cadena que contenga todos los comentarios con números secuenciales
+        let commentsText = '';
+        data.forEach((item, index) => {
+            const numSecuencial = index + 1;
+            commentsText += `<p>${numSecuencial}. ${item.quote}</p>`; // Agregar etiquetas <p> alrededor de cada frase
+        });
+
+        // Mostrar los comentarios en el elemento <p>
+        quoteElement.innerHTML = commentsText; // Usar innerHTML para renderizar las etiquetas HTML
+    } catch (error) {
+        console.error('Error fetching data:', error);
+        quoteElement.textContent = "Error al cargar los datos.";
     }
 });

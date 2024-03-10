@@ -21,12 +21,19 @@
             <div class="encabezado">
                 <img class="logo" src="./design/The Simpsons.svg" alt="encabezado">
             </div>
-            <div class="principal">
-                <div class="image-container">
-                    <img id="image" src="#" alt="Simpsons Image">
+            <div class="all">
+                <div class="principal">
+                    <div class="image-container">
+                        <img id="image" src="#" alt="Simpsons Image">
+                    </div>
+                    <p id="quote">Loading...</p>
                 </div>
-                <p id="quote">Loading...</p>
-                <button id="fetchbutton">boton</button>
+                <div class="buttons">
+                    <button id="fetchbutton">NUEVO PERSONAJE</button>
+                    <input id="input" type="text" name="taskText" autocomplete="off" placeholder="Digite el numero de frases que desea que aparezcan por personaje" class="input">
+                    <button class="send">Enviar</button>
+                    <button id="filtro">FILTRAR POR PERSONAJE</button>
+                </div>
             </div>
         </div>
         <script src="./scripts/js.js"></script>
