@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.cdnfonts.com/css/simpsonfont" rel="stylesheet">
                                 
   <link rel="icon" type="image/png" sizes="32x32" href="./design/The Simpsons.svg">
@@ -10,17 +10,15 @@
   <title>Los Simpsons | Juan Pablo Restrepo</title>
   <link rel="stylesheet" href="./styles/styles.css" />,
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
-    <body>
         <div class="container">
             <div class="encabezado">
-                <img class="logo" src="./design/The Simpsons.svg" alt="encabezado">
+                <img class="logo" src="./design/The Simpsons.svg" alt="the simpsons logo">
             </div>
             <div class="all">
                 <div class="principal">
@@ -32,9 +30,10 @@
                 </div>
                 <div class="buttons">
                     <button id="fetchbutton">NUEVO PERSONAJE</button>
-                    <input id="input" type="text" name="taskText" autocomplete="off" placeholder="Digite el numero de frases que desea que aparezcan por personaje" class="input">
-                    <button class="send">Enviar</button>
-                    <button id="filtro">FILTRAR POR PERSONAJE</button>
+                    <input id="input" type="text" name="taskText" autocomplete="off" placeholder="# frases">
+                    <button id="sendb"  class="send">Enviar</button>
+                    <input id="input-f" type="text" name="taskText" autocomplete="off" placeholder="Nombre personaje">
+                    <button id="filtrob" class="send">Filtrar</button>
                 </div>
             </div>
         </div>
