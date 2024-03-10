@@ -111,3 +111,57 @@ body {
 
     }
 }
+
+@media only screen and (max-width: 700px) {
+
+    .all{
+        flex-direction: column;
+        margin-right: 7rem;
+    }
+
+    .principal{
+        border: none;
+        height: 30rem;
+    }
+
+    .buttons{
+        flex-direction: row;
+        #fetchbutton,
+        .send,
+        #filtro{
+            font-size: medium;
+            color: #ffd100;
+            text-shadow: -2px 0px black, 0 2px black, 2px 0 black, 0 -2px black; 
+    
+        }
+    }
+
+    #fetchbutton{
+        margin-left: 0;
+        width: 9rem;
+        height: 5rem;
+    }
+    .segundo{
+        margin-left: 4rem;
+    }
+
+    #input{
+        margin-left:0;
+        width: 5rem;
+        height: 2.5rem;
+    }
+    
+    #input-f{
+        margin-left: 0;
+        width: 5rem;
+        height: 2.5rem;
+    }
+    
+    
+    .send{
+        margin-left: 0;
+        width: 5.5rem;
+        height: 2.5rem;
+    }
+
+}
