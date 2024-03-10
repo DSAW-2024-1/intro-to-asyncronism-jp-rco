@@ -125,6 +125,10 @@ body {
 
 @media only screen and (max-width: 900px) {
 
+    *{
+        overflow-x: auto;
+    }
+
     .container{
         margin-top: -2rem;
     }
