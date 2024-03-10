@@ -92,7 +92,7 @@ filtroButton.addEventListener('click', async () => {
             nameElement.textContent = characterName; 
         } else {
             quoteElement.textContent = `No se encontraron frases para ${characterName}.`;
-            imageElement.src = '';
+            imageElement.src = './../design/NOT FOUND.jpeg';
             const nameElement = document.getElementById('name');
             nameElement.textContent = ''; 
         }
