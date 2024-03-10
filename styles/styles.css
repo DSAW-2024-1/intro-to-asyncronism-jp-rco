@@ -114,14 +114,18 @@ body {
 
 @media only screen and (max-width: 700px) {
 
+    .container{
+        margin-top: -2rem;
+    }
+
     .all{
         flex-direction: column;
         margin-right: 7rem;
     }
 
     .principal{
+        margin-top: -2rem;
         border: none;
-        height: 30rem;
     }
 
     .buttons{
@@ -139,7 +143,6 @@ body {
     #fetchbutton{
         margin-left: 0;
         width: 9rem;
-        height: 5rem;
     }
     .segundo{
         margin-left: 4rem;
@@ -148,20 +151,16 @@ body {
     #input{
         margin-left:0;
         width: 5rem;
-        height: 2.5rem;
     }
     
     #input-f{
         margin-left: 0;
         width: 5rem;
-        height: 2.5rem;
     }
-    
     
     .send{
         margin-left: 0;
         width: 5.5rem;
-        height: 2.5rem;
     }
 
 }
