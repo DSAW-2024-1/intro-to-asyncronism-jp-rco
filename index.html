@@ -7,45 +7,60 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./design/The Simpsons.svg">
   
   <title>Los Simpsons | Juan Pablo Restrepo</title>
-  <link rel="stylesheet" href="./styles/styles.css" />,
+  <link rel="stylesheet" href="./styles/styles.css" />
 
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+    .error-message {
+      color: red;
+      font-size: 12px;
+      margin-top: 5px;
+    }
   </style>
 </head>
 <body>
-        <div class="container">
-            <div class="encabezado">
-                <img class="logo" src="./design/The Simpsons.svg" alt="the simpsons logo">
+<div class="container">
+    <div class="encabezado">
+        <img class="logo" src="./design/The Simpsons.svg" alt="the simpsons logo">
+    </div>
+    <div class="all">
+        <div class="principal">
+            <div class="image-container">
+                <p id="name">Character name</p>
+                <img id="image" src="./design/loading.svg" alt="Simpsons Image">
             </div>
-            <div class="all">
-                <div class="principal">
-                    <div class="image-container">
-                        <p id="name">Character name</p>
-                        <img id="image" src="./design/loading.svg" alt="Simpsons Image">
-                    </div>
-                    <p id="quote">Loading...</p>
+            <p id="quote">Loading...</p>
+        </div>
+        <div class="buttons">
+            <div class="primer">
+                <button id="fetchbutton">NUEVO PERSONAJE</button>
+            </div>
+            <div class="segundo">
+                <div class="error">
+                    <span class="error-message" id="secondErrorMessage"></span>
                 </div>
-                <div class="buttons">
-                    <div class="primer">
-                        <button id="fetchbutton">NUEVO PERSONAJE</button>
-                    </div>
-                    <div class="segundo">
-                        <input id="input" type="text" name="taskText" autocomplete="off" placeholder="# frases">
-                        <button id="sendb"  class="send">Enviar</button>
-                    </div>
-                    <div class="tercero">
-                        <input id="input-f" type="text" name="taskText" autocomplete="off" placeholder="Nombre personaje">
-                        <button id="filtrob" class="send">Filtrar</button>
-                    </div>
+                <div class="frases">
+                    <input id="input" type="text" name="taskText" autocomplete="off" placeholder="# frases">
+                    <button id="sendb" class="send">Enviar</button>
+                </div>
+            </div>
+            <div class="tercero">
+                <div class="error2">
+                    <span class="error-message" id="ThirdErrorMessage"></span>
+                </div>
+                <div class="nombre">
+                    <input id="input-f" type="text" name="taskText" autocomplete="off" placeholder="Nombre personaje">
+                    <button id="filtrob" class="send">Filtrar</button>
                 </div>
             </div>
         </div>
-        <script src="./scripts/js.js"></script>
-</body>
-    <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="#">Juan Pablo Restrepo</a>.
     </div>
+</div>
+<script src="./scripts/js.js"></script>
+<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Juan Pablo Restrepo</a>.
+</div>
+</body>
 </html>

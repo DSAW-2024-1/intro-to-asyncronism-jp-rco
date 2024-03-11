@@ -84,6 +84,15 @@ body {
     flex-direction: column;
 }
 
+.frases{
+    display: flex;
+    flex-direction: column;
+}
+
+.nombre{
+    display: flex;
+    flex-direction: column;
+}
 
 .tercero{
     display: flex;
@@ -125,11 +134,12 @@ body {
     }
 }
 
-@media only screen and (max-width: 900px) {
+.error-message{
+    margin-left: 2rem;
+    width: 9.5rem;
+}
 
-    *{
-        overflow-x: auto;
-    }
+@media only screen and (max-width: 900px) {
 
     .container{
         margin-top: -2rem;
@@ -147,6 +157,7 @@ body {
 
     .buttons{
         flex-direction: row;
+        overflow-x: hidden;
         #fetchbutton,
         .send,
         #filtro{
@@ -159,22 +170,29 @@ body {
 
     #fetchbutton{
         margin-left: 0;
-        width: 9rem;
+        width: 8rem;
     }
 
     .primero{
         margin-left: -10rem;
+        width: 5rem;
     }
 
-    .segundo{
-        margin-left: 2rem;
-        margin-right: 2rem;
-    }
-
-    .tercero{
+    .segundo {
+        display: flex;
+        flex-direction: column;
+        margin-left: 3rem;
         margin-right: 3rem;
+        width: 5rem;
     }
-
+    
+    .tercero {
+        display: flex;
+        flex-direction: column;
+        width: 5rem;
+        margin-right: 4rem;
+    }
+    
     #input{
         margin-left:0;
         width: 5rem;
@@ -182,16 +200,31 @@ body {
     
     #input-f{
         margin-left: 0;
-        width: 5rem;
+        max-width: 5rem;
     }
     
     .send{
+        margin-bottom: 0;
         margin-left: 0;
         width: 5.5rem;
     }
 
     #quote{
         padding-right: 6rem;
+        max-height: 20rem;
     }
+
+    .error-message{
+        margin-left: 0;
+        width: 5rem;
+    }
+
+    .error-message2{
+        margin-left: 0;
+        width: 5rem;
+        margin-bottom: 0;
+    }
+
+
 
 }
