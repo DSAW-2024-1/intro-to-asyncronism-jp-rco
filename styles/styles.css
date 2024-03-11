@@ -49,6 +49,7 @@ body {
 }
 
 .principal{
+    overflow-y: hidden;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -106,6 +107,7 @@ body {
 #quote {
     padding-right: 2rem;
     width: 30%;
+    max-height: 30rem;
     font-size: medium;
 }
 
